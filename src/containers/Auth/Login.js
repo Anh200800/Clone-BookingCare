@@ -120,7 +120,7 @@ handleShowHidePassword = () => {
                         </div>
                     </div>
                 </div>
-        )
+        );
     }
 }
 
