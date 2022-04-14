@@ -9,7 +9,7 @@
         "select-doctor": "Choose a good doctor",
         "fee": "Checkup package",
         "check-health": "General health check",
-        "support": "Support",
+        "support": "Support"
     },
     "banner": {
         "title1": "MEDICAL BACKGROUND",
@@ -19,7 +19,7 @@
         "child3": "General examination",
         "child4": "Medical test",
         "child5": "Mental health",
-        "child6": "Dental examination",
+        "child6": "Dental examination"
     
     },
     "common": {
