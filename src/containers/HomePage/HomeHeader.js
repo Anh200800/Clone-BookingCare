@@ -18,7 +18,7 @@ class HomeHeader extends Component {
           <div className="home-header-content">
             <div className="left-content">
               <i className="fas fa-bars"></i>
-              <img className="header-logo" src={{ logo }} />
+              <img className="header-logo" src={ logo } />
             </div>
             <div className="center-content">
               <div className="child-content">
@@ -61,6 +61,7 @@ class HomeHeader extends Component {
                   <FormattedMessage id="homeheader.check-health" />
                 </div>
               </div>
+                </div>
               <div className="right-content">
                 <div className="support">
                   <i className="fas fa-question-circle"></i>
@@ -89,8 +90,8 @@ class HomeHeader extends Component {
                   </span>
                 </div>
               </div>
-            </div>
           </div>
+        </div>
           <div className="home-header-banner">
             <div className="content-up">
               <div className="title1">
@@ -157,7 +158,6 @@ class HomeHeader extends Component {
               </div>
             </div>
           </div>
-        </div>
       </React.Fragment>
     );
       

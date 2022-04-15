@@ -20,13 +20,12 @@
                 margin-left: -45px;
             }
             
+            i {
+                font-size: 25px;
+                color: grey;
+                cursor: pointer;
+            }
         }
-        i {
-            font-size: 25px;
-            color: grey;
-            cursor: pointer;
-        }
-    }
         .center-content {
             width: 55%;
             display: flex;
@@ -39,20 +38,20 @@
                 }
             }
         }
-        .right-content {
-            width: 25%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            .support {
-                padding-right: 50px;
+            .right-content {
+                width: 25%;
                 display: flex;
+                justify-content: flex-end;
                 align-items: center;
-                cursor: pointer;
-                i {
-                    font-size: 15px;
-                    margin-right: 5px;
-                }
+                .support {
+                    padding-right: 50px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    i {
+                        font-size: 15px;
+                        margin-right: 5px;
+                    }
             }
             .language-vi {
                 cursor: pointer;
@@ -82,16 +81,18 @@
                     opacity: 0.8;
                 }
             }
-        }
+         }
     }
+}
         .home-header-banner {
-            background-image: url('../../assets/bookingcare-cover-4.jpg');
+            background-image: url('../../assets/bookingcare-cover-4.jpg');    
             height: 485px;
-    background-repeat: no-repeat;
+            background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
+    
     .content-up {
         background-image: linear-gradient(rgba(126,126,126, 0.25)), rgba(255,255,255,0.1);
         padding-top: 15px;
