@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 .slick-prev {
     left: -10px;
     z-index: 1000;
@@ -31,6 +36,9 @@
   }
   &.section-outstanding-doctor {
     background: #f5f5f5;
+  }
+  &.section-about {
+      height: 500px;
   }
   .section-body {
      .section-customize {
@@ -106,5 +114,29 @@
         }
     }
 }
+.section-about {
+    margin: 0 100px;
+    .section-about-header {
+        padding: 20px 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+.home-footer {
+    background: #64b9e5;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-footer {
+        display: flex;
+        .logo-social {
+         width: 32px;
+        margin: 10px 10px 10px 0;
+          }
+        }
+    };
+
 
         
