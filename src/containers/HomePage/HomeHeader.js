@@ -166,13 +166,15 @@ class HomeHeader extends Component {
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    userInfo: state.user.userInfo,
+    language: state.app.language,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     changeLanguageAppRedux : (language) => dispatch(changeLanguageApp(language))
   };
