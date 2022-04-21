@@ -9,7 +9,7 @@ class TableManageUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userRedux: [],
+      usersRedux: []
     };
   }
   componentDidMount() {
@@ -18,12 +18,20 @@ class TableManageUser extends Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.listUsers !== this.props.listUsers) {
       this.setState({
-        userRedux: this.props.listUsers,
+        usersRedux: this.props.listUsers,
       });
     }
   }
+  handleDeleteUser = (user) => {
+    this.props.deleteAUserRedux(user.id)
+  }
+  handleEditUser = (user) => {
+    this.props.handleEditUserFromParentKey(user)
+  }
 
   render() {
+
+
         let arrUsers = this.state.usersRedux;
 
     return (
@@ -36,25 +44,27 @@ class TableManageUser extends Component {
             <th>Address</th>
             <th>Actions</th>
           </tr>
-          {arrUsers && arrUsers.length > 0 &&
+          {arrUsers &&
+            arrUsers.length > 0 &&
             arrUsers.map((item, index) => { 
               return (
-          <tr>
+          <tr key={index}>
             <td>{item.email}</td>
             <td>{item.firstName}</td>
             <td>{item.lastName}</td>
             <td>{item.address}</td>
             <td>
-              <button className="btn-edit">
+                    <button onClick={() => this.handleEditUser(item)}
+                      className="btn-edit">
                 <i className="fas fa-pencil-alt"></i>
               </button>
               <button
+                onClick={() => this.handleDeleteUser(item)}
                 className="btn-delete"
-                // onClick={() => this.handleDeleteUser(item)}
               >
                 <i className="fas fa-trash"></i>
               </button>
-            </td>
+                  </td>
           </tr>
               )
             })
@@ -75,6 +85,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+    deleteAUserRedux: (id) => dispatch(actions.deleteAUser(id)),
   };
 };
 

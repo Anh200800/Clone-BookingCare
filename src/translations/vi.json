@@ -38,17 +38,18 @@
     }
   },
   "manage-user": {
-   "add": "Thêm mới người dùng",
-   "email": "Email",
-   "password": "Mật khẩu",
-   "first-name": "Tên",
-   "last-name": "Họ",
-   "phone-number": "Số điện thoại",
-   "address": "Địa chỉ",
-   "gender": "Giới tính",
-   "position": "chức danh",
-   "role": "Vai trò",
-   "image": "Ảnh đại diện",
-   "save": "Lưu user"
+    "add": "Thêm mới người dùng",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "phone-number": "Số điện thoại",
+    "address": "Địa chỉ",
+    "gender": "Giới tính",
+    "position": "chức danh",
+    "role": "Vai trò",
+    "image": "Ảnh đại diện",
+    "save": "Lưu user",
+    "edit": "Lưu thay đổi"
   }
 }
