@@ -7,7 +7,8 @@ import * as actions from "../../../store/actions"
 import "./UserRedux.scss";
 import Lightbox from "react-image-lightbox";
 import 'react-image-lightbox/style.css'
-import TableManageUser from './TableManageUser';
+import TableManageUser from "./TableManageUser";
+
 
 class UserRedux extends Component {
     constructor(props) {
@@ -71,20 +72,20 @@ class UserRedux extends Component {
         position: arrPositions && arrPositions.length > 0 ? arrPositions[0].key : '',
       });
     }
-    if (prevProps.listUsers !== this.props.listUsers) {
-      this.setState ({
-        email: '',
-        password: '',
-        firstName: '',
-        lastName: '',
-        address: '',
-        gender: '',
-        position: '',
-        role: '',
-        avatar: ''
+    // if (prevProps.listUsers !== this.props.listUsers) {
+    //   this.setState ({
+    //     email: '',
+    //     password: '',
+    //     firstName: '',
+    //     lastName: '',
+    //     address: '',
+    //     gender: '',
+    //     position: '',
+    //     role: '',
+    //     avatar: ''
 
-      });
-    }
+    //   });
+    // }
   }
   handleOnchangeImage = (event) => {
     let data = event.target.files;

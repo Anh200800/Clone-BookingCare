@@ -101,8 +101,8 @@ export const saveUserSuccess = () => ({
 
 })
 export const saveUserFailed = () => ({
-type: actionTypes.DELETE_USER_FAILDED
-})
+  type: actionTypes.CREATE_USER_FAILDED,
+});
 export const fetchAllUsersStart = () => {
   return async (dispatch, getState) => {
     try {

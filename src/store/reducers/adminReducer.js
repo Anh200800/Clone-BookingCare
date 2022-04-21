@@ -15,50 +15,50 @@ const adminReducer = (state = initialState, action) => {
       let copyState = { ...state };
       copyState.isLoadingGender = true;
       return {
-        ...copyState,
+        ...copyState
       };
 
     case actionTypes.FETCH_GENDER_SUCCESS:
       state.genders = action.data;
       state.isLoadingGender = false;
       return {
-        ...state,
+        ...state
       };
     case actionTypes.FETCH_GENDER_FAIDED:
       state.isLoadingGender = false;
       state.genders = [];
       return {
-        ...state,
+        ...state
       };
     case actionTypes.FETCH_POSITION_SUCCESS:
       state.positions = action.data;
       return {
-        ...state,
+        ...state
       };
-    case actionTypes.FETCH_POSITION_FAILDED:
+    case actionTypes.FETCH_POSITION_FAIDED:
       state.genders = [];
       return {
-        ...state,
+        ...state
       };
     case actionTypes.FETCH_ROLE_SUCCESS:
       state.roles = action.data;
       return {
-        ...state,
+        ...state
       };
-    case actionTypes.FETCH_ROLE_FAILDED:
+    case actionTypes.FETCH_ROLE_FAIDED:
       state.roles = [];
       return {
-        ...state,
+        ...state
       };
-    case actionTypes.FETCH_USERS_SUCCESS:
+    case actionTypes.FETCH_ALL_USERS_SUCCESS:
       state.users = action.users;
       return {
-        ...state,
+        ...state
       };
-    case actionTypes.FETCH_ROLE_FAILDED:
+    case actionTypes.FETCH_ALL_USERS_FAILDED:
       state.users = [];
       return {
-        ...state,
+        ...state
       };
 
     default:
