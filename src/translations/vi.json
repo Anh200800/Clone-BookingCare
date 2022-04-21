@@ -19,7 +19,6 @@
     "child4": "Xét nghiệm y học",
     "child5": "Sức khỏe tinh thần",
     "child6": "Khám nha khoa"
-    
   },
 
   "menu": {
@@ -51,5 +50,9 @@
     "image": "Ảnh đại diện",
     "save": "Lưu user",
     "edit": "Lưu thay đổi"
+  },
+  "homepage": {
+    "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
+    "more-infor": "Xem thêm"
   }
 }

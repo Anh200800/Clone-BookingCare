@@ -30,6 +30,9 @@
        background: #eceaea !important;
     }
 }
+.slick-disabled {
+    display: none !important;
+}
 .section-share {
   &.section-specialty {
     background: #f5f5f5;
@@ -56,7 +59,7 @@
             background-image: url('../../assets/specialty/specialty-image.jpg');
         }
         &.section-outstading-doctor {
-            background-image: url('../../assets/specialty/specialty-image.jpg');
+            // background-image: url('../../assets/specialty/specialty-image.jpg');
             width: 120px;
             height: 120px;
             border-radius: 50%;
