@@ -287,7 +287,7 @@ class UserRedux extends Component {
                       }}
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-9">
                     <label>
                       <FormattedMessage id="manage-user.address" />
                     </label>
@@ -378,7 +378,7 @@ class UserRedux extends Component {
                     </label>
                     <div className="preview-img-container">
                       <input
-                        className="previewImg"
+                        id="previewImg"
                         type="file"
                         hidden
                         onChange={(event) => this.handleOnchangeImage(event)}
@@ -389,29 +389,36 @@ class UserRedux extends Component {
                       <div
                         className="preview-image"
                         style={{
-                          backgroundImage: "url($(this.state.previewImgURL})",
+                          
+                          backgroundImage: `url(${this.state.preViewImgURL})`,
                         }}
-                        onClick={() => this.openPreviewImage()}
+                        onClick={() => this.openPreViewImage()}
                       ></div>
                     </div>
                   </div>
                   <div className="col-12 ">
                     <button
-                      className={this.state.action === CRUD_ACTIONS.EDIT ? "btn btn-warning" : "btn btn-primary"}
+                      className={
+                        this.state.action === CRUD_ACTIONS.EDIT
+                          ? "btn btn-warning"
+                          : "btn btn-primary"
+                      }
                       onClick={() => this.handleSaveUser()}
                     >
-                      {this.state.action === CRUD_ACTIONS.EDIT ?
+                      {this.state.action === CRUD_ACTIONS.EDIT ? (
                         <FormattedMessage id="manage-user.edit" />
-                        :
-                        <FormattedMessage id="manage-user.save" />}
-
+                      ) : (
+                        <FormattedMessage id="manage-user.save" />
+                      )}
                     </button>
                   </div>
                   <div className="col-12 mb-5">
                     <TableManageUser
-                      handleEditUserFromParentKey={this.handleEditUserFromParent}
-                      action={this.state.action}/>
-                    
+                      handleEditUserFromParentKey={
+                        this.handleEditUserFromParent
+                      }
+                      action={this.state.action}
+                    />
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 
 import Slider from "react-slick";
-import * as action from '../../../store/actions';
+import * as actions from '../../../store/actions';
 import {LANGUAGES} from '../../../utils';
 
 class OutStandingDoctor extends Component {
@@ -25,7 +25,7 @@ class OutStandingDoctor extends Component {
   }
   render() {
     let arrDoctors = this.state.arrDoctors;
-    let {LANGUAGES} = this.props;
+    let {language} = this.props;
     // arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
     return (
       <div className="section-share section-outstanding-doctor">
