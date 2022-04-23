@@ -16,24 +16,23 @@ class UserRedux extends Component {
           genderArr: [],
           positionArr: [],
           roleArr: [],
-          preViewImgURL: '',
+          preViewImgURL: "",
           isOpen: false,
 
-          email: '',
-          password: '',
-          firstName: '',
-          lastName:'',
-          phoneNumber:'',
-          address: '',
-          gender: '',
-          position: '',
-          role: '',
-          avatar: '',
+          email: "",
+          password: "",
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          address: "",
+          gender: "",
+          position: "",
+          role: "",
+          avatar: "",
 
-          action: '',
-          userEditId: '',
-
-        }
+          action: "",
+          userEditId: "",
+        };
     }
   async componentDidMount() {
       this.props.getGenderStart();
@@ -86,6 +85,7 @@ class UserRedux extends Component {
         firstName: "",
         lastName: "",
         address: "",
+        phoneNumber: "",
         gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].keyMap : "",
         position:
           arrPositions && arrPositions.length > 0 ? arrPositions[0].keyMap : "",
@@ -109,7 +109,7 @@ class UserRedux extends Component {
       })
     }
   }
-  openPreviewImage = () => {
+  openPreViewImage = () => {
     if(!this.state.preViewImgURL) return;
     this.setState({
       isOpen: true
@@ -118,7 +118,7 @@ class UserRedux extends Component {
   handleSaveUser = () => {
     let isValid = this.checkValidateInput();
     if (isValid === false) return;
-    
+
     let { action } = this.state;
 
     if (action === CRUD_ACTIONS.CREATE) {
@@ -133,13 +133,12 @@ class UserRedux extends Component {
         gender: this.state.gender,
         roleId: this.state.role,
         positionId: this.state.position,
-        avatar: this.state.avatar
-      })
-      
+        avatar: this.state.avatar,
+      });
     }
+    //fire redux edit user
     if (action === CRUD_ACTIONS.EDIT) {
-      //fire redux edit user
-      this.props.editANewUser({
+      this.props.editUserRedux({
         id: this.state.userEditId,
         email: this.state.email,
         password: this.state.password,
@@ -150,7 +149,7 @@ class UserRedux extends Component {
         gender: this.state.gender,
         roleId: this.state.role,
         positionId: this.state.position,
-        avatar: this.state.avatar
+        avatar: this.state.avatar,
       });
     }
   }
@@ -274,17 +273,15 @@ class UserRedux extends Component {
                       }}
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="form-group col-3">
                     <label>
                       <FormattedMessage id="manage-user.phone-number" />
                     </label>
                     <input
-                      className="form-control"
-                      type="text"
                       value={phoneNumber}
-                      onChange={(event) => {
-                        this.onChangeInput(event, "phoneNumber");
-                      }}
+                      onChange={(e) => this.onChangeInput(e, "phoneNumber")}
+                      type="text"
+                      className="form-control"
                     />
                   </div>
                   <div className="col-9">
@@ -389,7 +386,6 @@ class UserRedux extends Component {
                       <div
                         className="preview-image"
                         style={{
-                          
                           backgroundImage: `url(${this.state.preViewImgURL})`,
                         }}
                         onClick={() => this.openPreViewImage()}
@@ -397,7 +393,7 @@ class UserRedux extends Component {
                     </div>
                   </div>
                   <div className="col-12 ">
-                    <button
+                    <button type="button"
                       className={
                         this.state.action === CRUD_ACTIONS.EDIT
                           ? "btn btn-warning"
@@ -450,10 +446,11 @@ const mapDispatchToProps = dispatch => {
     getPositionStart: () => dispatch(actions.fetchPositionStart()),
     getRoleStart: () => dispatch(actions.fetchRoleStart()),
     createNewUser: (data) => dispatch(actions.createNewUser(data)),
-    fetchUserRedux: () => dispatch(actions.fetchAllUsersStart())
+    fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+    editUserRedux: (data) => dispatch(actions.editUser(data)),
 
     // processLogout: () => dispatch(actions.processLogout()),
-        // changeLanguageAppRedux: (language) => dispatch(actions.changeL
+    // changeLanguageAppRedux: (language) => dispatch(actions.changeL
   };
 };
 

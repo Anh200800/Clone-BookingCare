@@ -1,4 +1,3 @@
-import { reject } from "lodash";
 
 class CommonUtils {
     static getBase64 (file) {
