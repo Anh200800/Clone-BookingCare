@@ -8,8 +8,7 @@ import "./ManageDoctor.scss";
 
 import Select from "react-select";
 import { LANGUAGES, CRUD_ACTIONS } from "../../../utils";
-import { getDetailInforDoctor } from "../../../services/userService";
-
+import {getDetailInforDoctor} from '../../../services/userService'
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
 class ManageDoctor extends Component {
@@ -47,7 +46,7 @@ class ManageDoctor extends Component {
 
   componentDidMount() {
     this.props.fetchAllDoctors();
-    this.props.getAllRequiredDoctorInfor();
+    // this.props.getAllRequiredDoctorInfor();
   }
 
   //render data
@@ -487,7 +486,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllDoctors: () => dispatch(actions.fetchAllDoctors()),
     saveDetailDoctors: (data) => dispatch(actions.saveDetailDr(data)),
-    getAllRequiredDoctorInfor: () => dispatch(actions.getRequiredDoctorInfor()),
+    // getAllRequiredDoctorInfor: () => dispatch(actions.getRequiredDoctorInfor()),
   };
 };
 
