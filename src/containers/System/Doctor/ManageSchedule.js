@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import {FormattedMessage} from "react-intl";
 import * as actions from '../../../store/actions';
 import './ManageSchedule.scss';
+
 import {LANGUAGES, dateFormat} from "../../../utils"
 import Select from 'react-select';
 import DatePicker from '../../../components/Input/DatePicker';

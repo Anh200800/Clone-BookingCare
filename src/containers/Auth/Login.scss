@@ -1,82 +1,76 @@
-.login-background {
-    background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+.login-bg {
+    background: linear-gradient(45deg, rgb(2, 196, 255) 0%, rgb(229, 28, 255) 100%);
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .login-container {
         width: 400px;
-        height: 500px;
-        margin: 0 auto;
+        height: 450px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: white;
         border-radius: 10px;
-        background-color: white;
-    }
-    .login-content {
-        padding: 10px;
-        .text-login {
-            text-align: center;
-            font-weight: 600;
-            font-size: 24px;
-            padding-top: 10px;
-        }
-        .login-input {
-            margin: 7px 0;
-            .custom-input-password {
-                position: relative;
+        .login-content {
+            padding: 30px;
+            .text-login {
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+            }
+            .login-input {
+                margin: 10px 0;
+                .custom-input-password {
+                    position: relative;
+                    cursor: pointer;
+                    i {
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                    }
+                }
+            }
+            .btn-login {
+                width: 100%;
+                margin: 15px 0 5px 0px;
+                height: 35px;
+                border-radius: 15px;
+                outline: none;
+                border: none;
+                color: white;
+                font-size: 16px;
                 cursor: pointer;
-            i {
-                position: absolute;
-                right: 5px;
-                top: 10px
-                
             }
-            }
-        }
-        .btn-login {
-            width: 100%;
-            margin: 10px 0;
-            height: 30px;
-            border-radius: 15px;
-            outline: none;
-            border: none;
-            background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
-            color: white;
-        }
-        .forgot-password {
-            font-size: 12px;
-        }
-        .social-login{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            gap: 10px;
-
-            .google {
-                font-size: 30px;
-                background: #c32424;
-                border-radius: 50%;
-                height: 50px;
-                width: 50px;
+            .social-login {
                 display: flex;
-                align-items: center;
+                text-align: center;
                 justify-content: center;
-                color: white;
-            }
-            .facebook {
-                font-size: 30px;
-                background: #c32424;
-                border-radius: 50%;
-                height: 50px;
-                width: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
+                margin-top: 10px;
+                gap: 15px;
+                cursor: pointer;
+                .google,
+                .facebook,
+                .twitter {
+                    font-size: 20px;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+                .google {
+                    background: #c32424;
+                }
+                .facebook {
+                    background: #2067ff
+                }
+                .twitter {
+                    background: #26baff;
+                }
             }
         }
     }
-        
-    }
-    
-    
-    
+}

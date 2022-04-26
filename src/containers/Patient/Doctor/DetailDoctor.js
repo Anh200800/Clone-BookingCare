@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import HomeHeader from '../../../containers/HomePage/HomeHeader';
+import HomeHeader from '../../HomePage/HomeHeader';
 import './DetailDoctor.scss';
 import {getDetailInforDoctor} from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
-// import DoctorSchedule from "./DoctorSchedule";
+import DoctorSchedule from "./DoctorSchedule";
 // import DoctorExtraInfor from "./DoctorExtraInfor";
 // import LikeAndShare from "../SocialPlugin/LikeAndShare";
 // import Comment from "../SocialPlugin/Comment"
