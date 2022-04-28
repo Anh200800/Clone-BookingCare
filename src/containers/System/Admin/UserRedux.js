@@ -7,7 +7,7 @@ import * as actions from "../../../store/actions"
 import "./UserRedux.scss";
 import Lightbox from "react-image-lightbox";
 import 'react-image-lightbox/style.css'
-import TableManageUser from "./TableManageUser";
+import TableManageUser from "./TableManageUser"
 
 class UserRedux extends Component {
     constructor(props) {

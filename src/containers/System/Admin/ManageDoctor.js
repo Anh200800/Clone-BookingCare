@@ -48,7 +48,7 @@ class ManageDoctor extends Component {
 
     componentDidMount() {
         this.props.fetchAllDoctors();
-        // this.props.getAllRequiredDoctorInfor();
+        this.props.getAllRequiredDoctorInfor();
     }
 
     //render data
@@ -141,24 +141,24 @@ class ManageDoctor extends Component {
             })
         }
 
-        // if(prevProps.language !== this.props.language){
-        //     // let{resPrice, resPayment, resProvince, resSpecialty, resClinic}= this.props.allRequiredDoctorInfor;
+        if(prevProps.language !== this.props.language){
+            let{resPrice, resPayment, resProvince, resSpecialty, resClinic}= this.props.allRequiredDoctorInfor;
             
-        //     let dataSelect=this.buildDataInputSelect(this.props.allDoctors, 'USERS');
-        //     // let dataSelectPrice=this.buildDataInputSelect(resPrice, 'PRICE');
-        //     // let dataSelectPayment=this.buildDataInputSelect(resPayment, 'PAYMENT');
-        //     // let dataSelectProvince=this.buildDataInputSelect(resProvince, 'PROVINCE');
-        //     // let dataSelectSpecialty=this.buildDataInputSelect(resSpecialty, 'SPECIALTY');
-        //     let dataSelectClinic=this.buildDataInputSelect(resClinic, 'CLINIC');
-        //     this.setState({
-        //         listDoctors: dataSelect,
-        //         listPrice: dataSelectPrice,
-        //         listPayment: dataSelectPayment,
-        //         listProvince: dataSelectProvince,
-        //         listSpecialty: dataSelectSpecialty,
-        //         listClinic: dataSelectClinic,
-        //     })
-        // }
+            let dataSelect=this.buildDataInputSelect(this.props.allDoctors, 'USERS');
+            let dataSelectPrice=this.buildDataInputSelect(resPrice, 'PRICE');
+            let dataSelectPayment=this.buildDataInputSelect(resPayment, 'PAYMENT');
+            let dataSelectProvince=this.buildDataInputSelect(resProvince, 'PROVINCE');
+            let dataSelectSpecialty=this.buildDataInputSelect(resSpecialty, 'SPECIALTY');
+            let dataSelectClinic=this.buildDataInputSelect(resClinic, 'CLINIC');
+            this.setState({
+                listDoctors: dataSelect,
+                listPrice: dataSelectPrice,
+                listPayment: dataSelectPayment,
+                listProvince: dataSelectProvince,
+                listSpecialty: dataSelectSpecialty,
+                listClinic: dataSelectClinic,
+            })
+        }
 
     }
 
