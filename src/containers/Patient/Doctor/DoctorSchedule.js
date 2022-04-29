@@ -6,7 +6,7 @@ import localization from 'moment/locale/vi';
 import {LANGUAGES} from '../../../utils';
 import {getScheduleDoctorByDate} from "../../../services/userService"
 import {FormattedMessage} from 'react-intl';
-// import BookingModal from './Modal/BookingModal'
+import BookingModal from './Modal/BookingModal'
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
@@ -185,11 +185,11 @@ class DoctorSchedule extends Component {
                 </div>
             </div>
                 
-                {/* <BookingModal 
+                <BookingModal 
                     isOpenModal={isOpenModalBooking}
                     isCloseModal= {this.handleBookingClose}
                     dataTime={dataScheduleTimeModal}
-                /> */}
+                />
             </>
         );
     }

@@ -265,6 +265,7 @@ export const saveDetailDr = (data) => {
                     // dataDr: res.data.data
                 })
             } else {
+              console.log('err res: ', res)
                 toast.error('Save infor detail doctor error')
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED
@@ -339,3 +340,12 @@ export const getRequiredDoctorInfor = () => {
         }
     }
 }
+
+export const fetchRequiredDoctorInforSuccess = (allRequiredData) => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
+    data: allRequiredData,
+})
+
+export const fetchRequiredDoctorInforFailed = () => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED
+})
