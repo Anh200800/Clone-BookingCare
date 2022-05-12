@@ -39,7 +39,8 @@
     },
 
     "doctor": {
-      "manage-schedule": "Manage Doctor's schedule"
+      "manage-schedule": "Manage Doctor's schedule",
+      "manage-patient": "Manage Doctor's patient"
     }
   },
 
@@ -61,7 +62,9 @@
 
   "homepage": {
     "outstanding-doctor": "Last week's featured doctor",
-    "more-infor": "More Infor"
+    "more-infor": "More Infor",
+    "specialty-popular": "Popular specialty"
+
   },
 
   "manage-schedule": {
@@ -111,7 +114,9 @@
       "province": "Province",
       "nameClinic": "Clinic's name",
       "addressClinic": "Clinic's address",
-      "note": "Note"
+      "note": "Note",
+      "specialty": "Specialty",
+      "select-clinic": "Clinic"
     }
   }
 }

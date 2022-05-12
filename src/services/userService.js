@@ -73,21 +73,70 @@ const getProfileDoctorById = (doctorId) => {
 const postPatientBookAppointment = (data) => {
     return axios.post(`http://localhost:9000/api/patient-book-appointment`, data)
 }
+//verify email
+const postVerifyBookAppointment = (data) => {
+    return axios.post(`http://localhost:9000/api/verify-book-appointment`, data)
+}
+//create specialty
+const createNewSpecialty = (data) => {
+    return axios.post(`http://localhost:9000/api/create-new-specialty`, data)
+}
+//get specialty
+const getAllSpecialty = () => {
+    return axios.get(`http://localhost:9000/api/get-specialty`)
+}
+//detail specialty
+const getAllDetailSpecialty = (data) => {
+    return axios.get(`http://localhost:8082/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
+}
+//create Clinic
+const createNewClinic = (data) => {
+    return axios.post(`http://localhost:8082/api/create-new-clinic`, data)
+}
+
+//get all clinic
+const getAllClinic = () => {
+    return axios.get(`http://localhost:9000/api/get-clinic`)
+}
+
+//detail clinic 
+const getAllDetailClinic= (data) => {
+    return axios.get(`http://localhost:9000/api/get-detail-clinic-by-id?id=${data.id}`)
+}
+
+//get all patient
+const getAllPatientForDoctor= (data) => {
+    return axios.get(`http://localhost:9000/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`)
+}
+
+//send remedy
+const sendRemedy= (data) => {
+    return axios.post(`http://localhost:9000/api/send-remedy`, data)
+}
 
 export {
   handleLoginApi,
-  getAllUsers,
-  createNewUserService,
-  deleteUserService,
-  editUserService,
-  getAllCodeService,
-  getTopDoctorHomeService,
-  getAllDoctors,
-  saveDetailDoctorService,
-  getDetailInforDoctor,
-  saveBulkScheduleDoctor,
-  getScheduleDoctorByDate,
-  getExtraInforDoctorById,
-  getProfileDoctorById,
-  postPatientBookAppointment,
+    getAllUsers,
+    createNewUserService,
+    deleteUserService,
+    editUserService,
+    getAllCodeService,
+    getTopDoctorHomeService,
+    getAllDoctors,
+    saveDetailDoctorService,
+    getDetailInforDoctor,
+    saveBulkScheduleDoctor,
+    getScheduleDoctorByDate,
+    getExtraInforDoctorById,
+    getProfileDoctorById,
+    postPatientBookAppointment,
+    postVerifyBookAppointment,
+    createNewSpecialty,
+    getAllSpecialty,
+    getAllDetailSpecialty,
+    createNewClinic,
+    getAllClinic,
+    getAllDetailClinic,
+    getAllPatientForDoctor,
+    sendRemedy
 };

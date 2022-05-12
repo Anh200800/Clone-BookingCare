@@ -157,7 +157,6 @@ class DoctorExtraInfor extends Component {
               <div
                 className="hide-price"
                 onClick={() => this.showHideDetailInfor(false)}
-                className="text-info mt-2"
                 style={{ cursor: "pointer" }}
               >
                 Ẩn bảng giá
