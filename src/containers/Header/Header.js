@@ -57,7 +57,7 @@ class Header extends Component {
                 <div className="languages">
                     <span className="welcome">
                         <FormattedMessage id="home-header.welcome" />
-                        {userInfo && userInfo.firstName ? userInfo.firstName : 'Hoang97'}
+                        {userInfo && userInfo.firstName ? userInfo.firstName : 'Pham Tien Anh'}
                     </span>
 
                     <span 

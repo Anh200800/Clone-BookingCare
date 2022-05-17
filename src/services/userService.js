@@ -87,11 +87,11 @@ const getAllSpecialty = () => {
 }
 //detail specialty
 const getAllDetailSpecialty = (data) => {
-    return axios.get(`http://localhost:8082/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
+    return axios.get(`http://localhost:9000/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
 //create Clinic
 const createNewClinic = (data) => {
-    return axios.post(`http://localhost:8082/api/create-new-clinic`, data)
+    return axios.post(`http://localhost:9000/api/create-new-clinic`, data)
 }
 
 //get all clinic

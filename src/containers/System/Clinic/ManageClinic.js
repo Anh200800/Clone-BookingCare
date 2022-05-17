@@ -118,7 +118,7 @@ class ManageClinic extends Component {
 
                     <div className="col-12">
                         <MdEditor 
-                                style={{ height: '200px'}} 
+                                style={{ height: '500px'}} 
                                 renderHTML={text => mdParser.render(text)} 
                                 onChange={this.handleEditorChange}
                                 value={this.state.descriptionMarkdown} 

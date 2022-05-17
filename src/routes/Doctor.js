@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Header from '../containers/Header/Header';
 import  ManageSchedule from '../containers/System/Doctor/ManageSchedule'
-import ManagePatient from 'containers/System/Doctor/ManagePatient';
+import ManagePatient from '../containers/System/Doctor/ManagePatient'
 
 class Doctor extends Component {
     render() {

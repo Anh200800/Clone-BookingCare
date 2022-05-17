@@ -128,7 +128,7 @@ class ManageDoctor extends Component {
     if (
       prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor
     ) {
-      let { resPrice, resPayment, resProvince, resSpecialty, resClinic } =
+      let { resPrice, resPayment, resProvince, resSpecialty, resClinic  } =
         this.props.allRequiredDoctorInfor;
 
       let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
@@ -162,15 +162,10 @@ class ManageDoctor extends Component {
       );
       let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
       let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
-      let dataSelectProvince = this.buildDataInputSelect(
-        resProvince,
-        "PROVINCE"
-      );
-      let dataSelectSpecialty = this.buildDataInputSelect(
-        resSpecialty,
-        "SPECIALTY"
-      );
+      let dataSelectProvince = this.buildDataInputSelect(resProvince,"PROVINCE");
+      let dataSelectSpecialty = this.buildDataInputSelect(resSpecialty,"SPECIALTY");
       let dataSelectClinic = this.buildDataInputSelect(resClinic, "CLINIC");
+
       this.setState({
         listDoctors: dataSelect,
         listPrice: dataSelectPrice,
@@ -205,16 +200,17 @@ class ManageDoctor extends Component {
       selectedPayment: this.state.selectedPayment.value,
       selectedProvince: this.state.selectedProvince.value,
       selectedSpecialty: this.state.selectedSpecialty.value,
-    //   selectedClinic: this.state.selectedClinic.value,
+      selectedClinic: this.state.selectedClinic.value,
 
       nameClinic: this.state.nameClinic,
       addressClinic: this.state.addressClinic,
       note: this.state.note,
 
-    //   clinicId: this.state.selectedClinic
-    //     ? this.state.selectedClinic.value
-    //     : "",
-    //   specialtyId: this.state.selectedSpecialty.value,
+      clinicId:
+        this.state.selectedClinic && this.state.selectedClinic.value
+          ? this.state.selectedClinic.value
+          : "",
+      specialtyId: this.state.selectedSpecialty.value,
 
       //exchange create vs edit
       action: hasOldData === true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
@@ -224,12 +220,12 @@ class ManageDoctor extends Component {
   //onchange select
   handleChangeSelect = async (selectedOption) => {
     this.setState({ selectedOption });
+    let { listPayment, listPrice, listProvince, listSpecialty, listClinic } =
+      this.state;
 
     let res = await getDetailInforDoctor(selectedOption.value);
     if (res && res.data.errCode === 0 && res.data.data.Markdown) {
       let markdown = res.data.data.Markdown;
-      let { listPayment, listPrice, listProvince, listSpecialty, listClinic } =
-        this.state;
 
       //infor clinic
       let addressClinic = "",
@@ -442,14 +438,14 @@ class ManageDoctor extends Component {
           <div className="col-2 form-group">
             <label>
               {" "}
-              <FormattedMessage id="admin.manage-doctor.addressClinic" />
+              <FormattedMessage id="admin.manage-doctor.specialty" />
             </label>
             <Select
               value={this.state.selectedSpecialty}
               onChange={this.handleChangeSelectDoctorInfor}
               options={this.state.listSpecialty}
               placeholder={
-                <FormattedMessage id="admin.manage-doctor.addressClinic" />
+                <FormattedMessage id="admin.manage-doctor.specialty" />
               }
               name={"selectedSpecialty"}
             />
@@ -457,14 +453,14 @@ class ManageDoctor extends Component {
 
           <div className="col-2 form-group">
             <label>
-              <FormattedMessage id="admin.manage-doctor.addressClinic" />
+              <FormattedMessage id="admin.manage-doctor.select-clinic" />
             </label>
             <Select
               value={this.state.selectedClinic}
               onChange={this.handleChangeSelectDoctorInfor}
               options={this.state.listClinic}
               placeholder={
-                <FormattedMessage id="admin.manage-doctor.addressClinic" />
+                <FormattedMessage id="admin.manage-doctor.select-clinic" />
               }
               name={"selectedClinic"}
             />

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import DatePicker from '../../../components/Input/DatePicker';
 import {getAllPatientForDoctor, sendRemedy} from '../../../services/userService'
 import moment from 'moment';
-import RemedyModal from './RemedyModal'
+// import RemedyModal from './RemedyModal'
 import { toast } from 'react-toastify';
 import LoadingOverlay from 'react-loading-overlay';
 import './ManagePatient.scss'
@@ -196,12 +196,12 @@ class ManagePatient extends Component {
 
                 </div>
 
-                <RemedyModal 
+                {/* <RemedyModal 
                     isOpenModal = {isOpenRemedyModal}
                     dataModal={dataModal}
                     isCloseModal = {this.isCloseModal}
                     sendRemedy={this.sendRemedy}
-                />
+                /> */}
 
                 </LoadingOverlay>
             </>
